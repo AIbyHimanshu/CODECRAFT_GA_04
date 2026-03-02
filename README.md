@@ -101,7 +101,7 @@ Output (3ch, 256×256)
 
 ### Discriminator — 70×70 PatchGAN
 ```
-(Input + Real/Fake concatenated, 6ch) → Conv×4 → 30×30 patch score map
+(Input + Real/Fake concatenated, 6ch) → Conv blocks → patch score map (≈30×30 for 256×256 inputs)
 ```
 
 - Each value in the 30×30 output scores one 70×70 receptive field patch
@@ -166,12 +166,14 @@ Trained for **100 epochs** on **Tesla T4 GPU** in ~32 minutes:
 | 50    | ~0.3   | ~31    | ~29  |
 | 100   | ~0.4   | ~29    | ~27  |
 
+> Visualization format: Input (label map) | Generated (fake photo) | Target (real photo)
+
 ### Loss Curve Observations
 
-- **Generator (total)** declines steadily ~37 → ~29 — consistent learning, no collapse
-- **Discriminator** stays near 0 — stable throughout, no oscillation
-- **G L1 ×100** dominant component, drops ~35 → ~27 — pixel accuracy improving each epoch
-- **G adversarial** stays flat at ~2 — stable GAN dynamics, no mode collapse observed
+- **Generator (total)** declines steadily — indicates consistent learning without collapse
+- **Discriminator loss** remains low and stable — no strong oscillations observed
+- **G L1 ×100** dominates early and declines gradually — reconstruction fidelity improves
+- **G adversarial** stays bounded — suggests stable GAN dynamics
 
 L1 still declining at epoch 100 indicates further improvement is possible by training to 200 epochs.
 
