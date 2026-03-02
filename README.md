@@ -205,11 +205,8 @@ Adversarial loss alone leads to hallucinated but structurally incorrect details.
 
 ## References
 
-- Isola et al. — *Image-to-Image Translation with Conditional Adversarial Networks*
-  https://arxiv.org/abs/1611.07004
-- Conditional GAN explanation — GeeksforGeeks
-  https://www.geeksforgeeks.org/deep-learning/conditional-generative-adversarial-network/
-- cGAN practical guide — Medium via Scribe
-  https://scribe.rip/cgan-conditional-generative-adversarial-network-how-to-gain-control-over-gan-outputs-b30620bd0cc8
+- [Isola et al. — *Image-to-Image Translation with Conditional Adversarial Networks*](https://arxiv.org/abs/1611.07004)
+- [Conditional GAN explanation — GeeksforGeeks](https://www.geeksforgeeks.org/deep-learning/conditional-generative-adversarial-network/)
+- [cGAN practical guide — Medium via Scribe](https://scribe.rip/cgan-conditional-generative-adversarial-network-how-to-gain-control-over-gan-outputs-b30620bd0cc8)
 
 ---
